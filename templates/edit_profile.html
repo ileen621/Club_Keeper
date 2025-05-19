@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}修改基本資料 - 會員系統{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h2 class="text-center mb-4">修改基本資料</h2>
+    <form method="post">
+      <div class="mb-3">
+        <label class="form-label">用戶名</label>
+        <input
+          type="text"
+          class="form-control"
+          value="{{ user.username }}"
+          readonly
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">電子郵件</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          value="{{ user.email }}"
+          required
+        /><div class="invalid-feedback" style="background:#333; color:#fff;">
+        請填寫此欄位。
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">密碼</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          value="{{ user.password }}"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">手機</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          name="phone"
+          value="{{ user.phone }}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="birthdate" class="form-label">出生年月日</label>
+        <input
+          type="date"
+          class="form-control"
+          id="birthdate"
+          name="birthdate"
+          value="{{ user.birthdate }}"
+        />
+      </div>
+      <div class="d-flex justify-content-center gap-2">
+        <button type="submit" class="btn btn-primary">儲存</button>
+        <a
+          href="{{ url_for('welcome', iid=user.iid) }}"
+          class="btn btn-secondary"
+        >離開</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

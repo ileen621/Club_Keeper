@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}註冊 - 會員系統{% endblock %}
+
+{% block content %}
+<div class="mx-auto" style="max-width: 500px;">
+  <h2 class="text-center mb-4">會員註冊</h2>
+  <form method="post">
+    <div class="mb-3">
+      <label for="username" class="form-label">用戶名</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        placeholder="請輸入用戶名"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">電子郵件</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="請輸入電子郵件"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">密碼</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="請輸入密碼"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">手機</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="請輸入手機號碼"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="birthdate" class="form-label">出生年月日 (YYYY-MM-DD)</label>
+      <input
+        type="date"
+        class="form-control"
+        id="birthdate"
+        name="birthdate"
+      />
+    </div><div class="d-grid gap-2">
+    <button type="submit" class="btn btn-primary btn-sm">註冊</button>
+  </form>
+</div>
+{% endblock %}

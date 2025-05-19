@@ -1,0 +1,15 @@
+
+# Ensure LF line endings for text fil
+*.py               text eol=lf
+templates/**/*.html text eol=lf
+static/css/**/*.css text eol=lf
+static/js/**/*.js   text eol=lf
+
+# Treat the SQLite database as binary
+# membership.db      binary
+
+# Exclude from git‐archive / release bundles
+
+.flaskenv          export-ignore
+venv/**            export-ignore
+membership.db      export-ignore
