@@ -5,7 +5,7 @@ DB_FILE = 'membership.db'
 
 
 def connect_db():
-    """連到 SQLite，並啟用 dict-like row 存取。"""
+    #連線SQLite資料庫
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
     return conn
@@ -53,8 +53,7 @@ def add_stars(s):
 
 
 @app.route('/')
-def index():
-    """首頁：顯示 index.html。"""
+def index():#在首頁顯示 index.html。
     return render_template('index.html')
 
 
@@ -163,7 +162,7 @@ def welcome(iid):
 
 
 @app.route('/edit_profile/<int:iid>', methods=['GET', 'POST'])
-def edit_profile(iid):                #修改基本資料:顯示現有資料，更新
+def edit_profile(iid):  #修改基本資料:顯示現有資料，更新
     
     if request.method == 'POST':
         email = request.form['email']
