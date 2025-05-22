@@ -1,0 +1,16 @@
+# ===== Python 虛擬環境 =====
+venv/
+
+# 資料庫 & Instance
+*.db
+instance/
+
+#快取 & IDE
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+
+#作業系統檔案 
+.DS_Store
+Thumbs.db
